@@ -7,4 +7,5 @@ HOME_CONFIG=$HOME/.config
 $HOME/.zshrc \
 $HOME_CONFIG/bpytop \
 /etc/pacman.conf \
+/etc/fstab \
 ./rootfs

@@ -1,0 +1,30 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/nvme0n1p2
+UUID=7e8f3dcf-3132-47d1-80d0-57417a947105	/         	ext4      	rw,relatime	0 1
+
+# /dev/mapper/crypthome
+UUID=c75c0814-c7b1-4a44-ba51-df7ff588304c	/home     	ext4      	rw,relatime	0 2
+
+# /dev/nvme0n1p1
+UUID=CD58-5B95      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+
+# /dev/sdc2 LABEL=projects
+UUID=04bfa3db-bff9-4f9b-af55-7dc7395a09a7	/var/lib/docker	ext4      	rw,relatime	0 2
+
+# /dev/sdc1 LABEL=docker
+UUID=04869c7a-763b-4c84-afc0-d992ef78f1ca	/projects	ext4      	rw,relatime	0 2
+
+# /dev/sda1 LABEL=big-blue
+UUID=a7fb5d21-fe4a-44b8-ab5b-6536d19c02f0	/var/big-blue	ext4      	rw,relatime	0 2
+
+# Swap
+/dev/zram0 none swap defaults 0 0
+/dev/zram1 none swap defaults 0 0
+
+# Tmpfs
+tmpfs   /tmp         	tmpfs   rw,nodev,nosuid,size=2G         0  0
+#tmpfs   /var/lock       tmpfs   rw,nodev,nosuid,size=2G          0  0
+#tmpfs   /var/run        tmpfs   rw,nodev,nosuid,size=2G          0  0
